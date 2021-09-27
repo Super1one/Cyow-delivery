@@ -1,0 +1,142 @@
+@import "../config";
+
+.l-main__content {
+    background-color: rgb(245, 218, 167);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    
+    
+
+    &__order {
+        padding-right: 33px;
+        
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+        &__wellcome{
+            font-size: 30px;
+        }
+        &__classificar{
+            label {
+                h2 {
+                    margin-bottom: 5px;
+                }
+                select {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        
+    }
+
+    &-v{
+        display: flex;
+        flex-flow:row nowrap;
+        justify-content: space-between;
+
+        padding: 30px 33px ;
+        border-radius: 10px;
+        
+        background-color: white;
+        
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+        display: flex;
+        
+
+        &__info {
+            display: flex;
+            
+
+            &__logo{
+                margin-right: 30px;
+                border: none;
+                img {
+                border-radius: 50%;
+                }
+            }
+            &__card{
+                display: flex;
+                flex-flow: column nowrap;
+
+                &__title{
+                    margin-bottom: 15px ;
+                    &__text {
+                        margin-bottom: 15px;
+                    }
+
+                    &__tags {
+                        display: flex;
+                        flex-flow: row wrap;
+
+                        span {
+                            
+                            a {
+                                text-decoration: none;
+                                color: blue;
+                                margin-right: 2px;
+
+                                &:hover {
+                                    color: rgb(151, 98, 0);
+                                }
+                                
+                                &:not(:last-child){
+                                    &::after {
+                                        content: ",";
+                                    }
+                                }
+                            }
+                        
+                        }
+                    }
+                        
+                    
+                }
+                &__ind{
+                    text-align: center;
+                    
+                    display: flex;
+                    flex-flow: row nowrap;
+
+                    margin-top: 20px;
+
+                    &__item {
+                    
+                        &:not(:last-child){
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+
+        }
+        &__cta {
+            display: flex;
+            flex-flow: column nowrap;
+
+            &__menu {
+                margin-bottom: 15px;
+                button {
+                    width: 135px;
+                    height: 30px;
+                    background-color: #009147;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                }
+            }
+            &__cupon{
+                width: 135px;
+                height: 30px;
+                  
+            }
+        
+        }
+    }
+}
+
+    

@@ -17,10 +17,276 @@
 </head>
 
 <body>
+    <div class="web-layout">
+        
+        <header class="l-header">
+            <section class="l-header-v">
 
-    
+                <div class="l-header-v__logo">
+                    <a href="https://www.google.com" class="l-header-v__logo-a">
+                        <div class="l-header-v__logo-a__text">
+                            <h1>Uai rango</h1>
+                        </div>
+                        <div class="l-header-v__logo-a__icon">
+                            <img src="./custom/img/logo/logo.png" alt="" srcset="">
+                        </div>
+                    </a>
+                </div>
 
+                <nav class="l-header-v__nav">
+                    <ul class="l-header-v__nav__menu">
+                        <li class="l-header-v__nav__menu__item">
+                            <a href="#" class="l-header-v__nav__menu__item-a-1st">link</a>
+                        </li>
+                        <li class="l-header-v__nav__menu__item">
+                            <a href="#" class="l-header-v__nav__menu__item-a-2nd">link</a>
+                        </li>
+                        <li class="l-header-v__nav__menu__item">
+                            <a href="#" class="l-header-v__nav__menu__item-a-3rd">link</a>
+                        </li>
+                    
+                    </ul>
+                </nav>
+            </section>
+        </header>
 
+        <main class="l-main">
+
+            <section class="l-main__aside">
+
+                <div class="l-main__aside__comment">
+                    <div class="l-main__aside__comment-1st">
+                        <span>
+                            <i class="fas fa-utensil-spoon"></i>
+                        </span>
+                        <span>
+                            Sugerir restaurante
+                        </span>
+                        
+                    </div>
+                    <div class="l-main__aside__comment-2nd">
+                        <span>
+                            <i class="fas fa-comments"></i>
+                        </span>
+                        <span>
+                            Falar com o restaurante
+                        </span>
+                    </div>
+                </div>
+
+                <div class="l-main__aside__search">
+                    
+                    <label for="busca">
+                        <span>busca</span>
+                        <input type="text" name="busca" id="busca">
+                    </label>
+                </div>
+
+                <div class="l-main__aside__filter">
+
+                    <fieldset class="l-main__aside__filter__field">
+                        <legend class="l-main__aside__filter__field__title">
+                            <p>Metodo de pagamento</p>
+                        </legend>
+
+                        <div class="l-main__aside__filter__field__option">
+                            <label for="cash">
+                                <input type="checkbox" name="cash" id="cash">
+                                <span>Dinheiro</span>
+                            </label>
+                        </div>
+                        <div class="l-main__aside__filter__field__option">
+                            <label for="card">
+                                <input type="checkbox" name="card" id="card">
+                                <span>cartao</span>
+                            </label>
+                        </div>
+
+                    </fieldset>
+                    <fieldset class="l-main__aside__filter__field">
+                        <legend class="l-main__aside__filter__field__title">
+                            <p>Tipo de entrega</p>
+                        </legend>
+
+                        <div class="l-main__aside__filter__field__option">
+                            <label for="cash">
+                                <input type="checkbox" name="cash" id="cash">
+                                <span>Delivery</span>
+                            </label>
+                        </div>
+                        <div class="l-main__aside__filter__field__option">
+                            <label for="card">
+                                <input type="checkbox" name="card" id="card">
+                                <span>Take out</span>
+                            </label>
+                        </div>
+
+                    </fieldset>
+                </div>
+            </section>
+
+            <section class="l-main__content">
+                <div class="l-main__content__order">
+                    <div class="l-main__content__order__wellcome">
+                        <span>
+                            Seja muito bem vindo!
+                        </span>
+                        <span>
+                            <i class="fas fa-laugh-wink"></i>
+                        </span>
+                    </div>
+                    <div class="l-main__content__order__classificar">
+                        <label for="sort">
+                            <h2>ordenar por</h2>
+                            <select name="sort" id="sort">
+                                <option value="0">Cidade</option>
+                                <option value="1">Tipo de entrega</option>
+                                <option value="2">Forma de pagamento</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="l-main__content-v">
+                    <div class="l-main__content-v__info">
+                        <div class="l-main__content-v__info__logo">
+                            <img src="./custom/img/logo/logo-square.jpg" alt="" srcset="">
+                        </div>
+                        <div class="l-main__content-v__info__card">
+                            <div class="l-main__content-v__info__card__title">
+                                <div class="l-main__content-v__info__card__title__text">
+                                    Restaurante Cana Brava
+                                </div>
+                                <div class="l-main__content-v__info__card__title__tags">
+                                    <span>
+                                        <a href="#">Suco</a>
+                                        <a href="#">Suco</a>
+                                        <a href="#">Suco</a>
+                                    </span>
+                                    
+                                </div>
+                            </div>
+                            <div class="l-main__content-v__info__card__ind">
+                                <div class="l-main__content-v__info__card__ind__item">
+                                    <span><i class="fas fa-motorcycle"></i></span>
+                                    <p>Tempo Médio</p>
+                                    <p>60 min</p>
+                                </div>
+                                <div class="l-main__content-v__info__card__ind__item">
+                                    <span><i class="fas fa-motorcycle"></i></span>
+                                    <p>Tempo Médio</p>
+                                    <p>60 min</p>
+                                </div>
+                                <div class="l-main__content-v__info__card__ind__item">
+                                    <span><i class="fas fa-motorcycle"></i></span>
+                                    <p>Tempo Médio</p>
+                                    <p>60 min</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-main__content-v__cta">
+                        <div class="l-main__content-v__cta__menu">
+                            <button>cardapio</button>
+                        </div>
+                        <div class="l-main__content-v__cta__cupon">
+                            <label for="cupons">
+                                <span>
+                                    cupons
+                                </span>
+                                <select name="cupons" id="cupons">
+                                    <option value="0"></option>
+                                    <option value="1">5%</option>
+                                    <option value="2">10%</option>
+                                </select>
+                           
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+        </main>
+
+        <footer class="l-footer">
+            <section class="l-footer__info">
+
+                <div class="l-footer__info__f-logo">
+
+                    <a href="www.google.com" class="l-footer__info__f-logo-a">
+                        <div class="l-footer__info__f-logo-a__text">
+                            <h1>Uai rango</h1>
+                            <h3>Estabelecimento</h3>
+                        </div>
+                        <div class="l-footer__info__f-logo-a__icon">
+                            <span>
+                                <i class="fas fa-utensils"></i>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="l-footer__info__list">
+                    <ul>
+                        <li class="li"><a href="#">sobre</a></li>
+                        <li class="li"><a href="#">sobre</a></li>
+                        <li class="li"><a href="#">sobre</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="l-footer__info__social">
+                    <div class="l-footer__info__social__text">
+                        <h1>Redes sociais</h1>
+                    </div>
+                    <div class="l-footer__info__social__icons">
+                        <span>
+                            <a href="#">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                        </span>
+                        
+                    </div>
+                </div>
+                <div class="l-footer__info__app">
+                    <div class="l-footer__info__app__text">
+                        <h1>App</h1>
+                    </div>
+                    <div class="l-footer__info__app__icons">
+                        <span>
+                            <a href="#">
+                                <i class="fab fa-android"></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="https://www.google.com/">
+                                <i class="fab fa-apple"></i>
+                            </a>
+                        </span>
+                    </div> 
+                </div>
+                    
+                </section>
+            <section class="l-footer__copy">
+                <div class="l-footer__copy__text">
+                    &copy; 2020-2021 Cyow Todos direitos reservados
+                </div>
+                <div class="l-footer__copy__cnpj">
+                    CNPJ 99.999.999/0000-99
+                </div>
+            </section>  
+        </footer>
+
+    </div>
 </body>
 
 </html>
