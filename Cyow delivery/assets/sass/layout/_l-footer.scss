@@ -1,125 +1,32 @@
-@import "../config";
 
-.l-footer {
-    
-    background-color: green;
+/* #configuraçoes */
+@import "../config.scss";
+
+$layout-name: l-footer;
+
+.#{$layout-name} {
     grid-area: footer;
 
-    display: grid;
-    grid-template-columns: 1080px;
-    justify-content: center;
-
+    background-color: lighten($color: gray, $amount: 10);
+    
+    @include breakpoint(desk){
+        height: 270px;
+        display: grid;
+        grid-template-columns: $desk;
+        justify-content: center;
+        grid-template-rows: 70px 1fr;
+        grid-template-areas: 
+        "info"
+        "copy"
+        ;
+    }
     &__info{
-        background-color: #009147;
-        height: 200px;
-
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-
-        &__f-logo{
-            color: white;
-
-            &-a {
-                background-color: powderblue;
-                padding: 15px;
-
-                display: flex;
-                flex-flow: row nowrap;
-
-                &__text{
-                    font-size: 15px;
-                }
-                &__icon{
-                    .fa-utensils {
-                        font-size: 65px;
-                    }
-                }
-            }
-            
-        }
-
-        &__list{
-            background-color: orange;
-            margin: 30px 0 15px 0;
-
-            ul {
-                list-style: none;
-                li {
-                    &:not(:last-child){
-                        margin-bottom: 10px;
-                    }
-                    a{
-                        text-decoration: none;
-                        padding: 0 30px;
-                        background-color: pink;
-                    }
-                    a:hover {
-                        color: yellow;
-                    }
-                }
-            }  
-        }
-
-        &__social{
-                color: white;
-
-            &__text{
-                color: inherit;
-                text-align: center;
-            }
-            &__icons{
-                font-size: 50px;
-                span {
-                    a {
-                        text-decoration: none;
-                        color: inherit;   
-                    }
-                }
-                span:hover {
-                    color: yellow;    
-                }
-            }
-            
-        }
-
-        &__app {
-            color: white;
-
-            &__text{
-                color: inherit;
-                text-align: center;
-            }
-            &__icons{
-                font-size: 50px;
-
-                span {
-                    a{
-                        text-decoration: none;
-                        color: inherit;
-                    }
-                }
-                span:hover{
-                    color: yellow;
-                }
-            }
-        }
+        grid-area: info;
+        background-color: rgb(192, 243, 116);
     }
 
     &__copy{
-        background-color: purple;
-        color: white;
-
-        text-align: center;
-        font-size: 20px;
-        font-weight: normal;
-
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center;
-
-        height: 70px;
+        grid-area: copy;
+        background-color: rgb(97, 207, 97);
     }
 }

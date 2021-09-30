@@ -1,15 +1,57 @@
-@import "../components/c-card";
-@import "../components/c-filter";
 
-@import "../config";
+/* #configuraçoes */
+@import "../config.scss";
 
-.l-main {
-    background-color: rgb(216, 211, 211);
+/* #componentes */
+@import "../components/c-filter.scss";
+@import "../components/c-card.scss";
+
+
+
+$layout-name:l-main;
+
+.#{$layout-name} {
     grid-area: main;
-
     display: grid;
-    grid-template-columns: 250px 1fr;
-    column-gap: 30px;
     grid-template-areas: 
-    "c c";  
+    "aside"
+    "content"
+    ;
+
+    @include breakpoint(desk){
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: minmax(0, auto) 1fr;
+        column-gap: 30px;
+        grid-template-areas: 
+        "aside content"
+        ".     content";
+    }
+
+    &__content{
+        grid-area: content;
+
+        
+
+        /* c-filter here */
+    }
+    &__aside{
+        grid-area: aside;
+
+        background-color: rgb(245, 245, 223);
+        border-radius: 10px;
+        padding: 30px;
+        max-height: 200px;
+        margin-bottom: 20px;
+        overflow: auto;
+
+        @include breakpoint(desk){
+            max-height:inherit;
+            margin-bottom: inherit;
+        }
+
+        /* c-filter here */
+
+        
+    }
 }
+    

@@ -1,80 +1,27 @@
-@import "../config";
 
-.l-header {
-    
+/* #configuraçoes */
+@import "../config.scss";
+
+$layout-name: l-header;
+
+.#{$layout-name} {
     grid-area: header;
+
+    background-color: gray;
     height: 70px;
-    background-color: red;
 
-    .l-header-v{
-        width: 100%;
+    &-v{
         height: 100%;
-
-        max-width: 1080px;
-        margin: 0 auto;
+        background-color: rgb(243, 70, 70);
 
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        
-        &__logo{
 
-            display: flex;
-            align-items: center;
-
-            &-a {
-                text-decoration: none;
-                background-color: greenyellow   ;
-                
-                display: flex;
-                flex-flow: row nowrap;
-                flex-flow: row nowrap;
-                justify-content: center;
-                align-items: center;
-
-                &__text{
-                    font-size: 35px;
-                    color: black;                    
-                }
-
-                &__icon{}
-            }    
+        @include breakpoint(desk){
+            width: $desk;
+            margin: 0 auto;
         }
-
-        &__nav {
-            height: 100%;
-            background-color: blue;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            &__menu{
-                list-style: none;
-                display: flex;
-                flex-flow: row nowrap;
-
-                &__item {
-                    background-color: yellow;
-
-                    &-a-1st{
-                        text-decoration: none;
-                        padding: 5px 15px 5px 15px;
-                    }
-                    &-a-2nd{
-                        text-decoration: none;
-                        padding: 5px 15px 5px 15px;
-                    }
-                    &-a-3rd{
-                        text-decoration: none;
-                        padding: 5px 0 5px 15px;
-                    }
-
-                    a:hover {
-                        color: orange;
-                    }         
-                }
-            }
-        }  
+       
     }
 }

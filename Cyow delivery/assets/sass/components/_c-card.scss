@@ -1,142 +1,248 @@
-@import "../config";
 
-.l-main__content {
-    background-color: rgb(245, 218, 167);
+/* #Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+/* #configuraçoes */
+@import "../config.scss";
+
+$component-name:c-card;
+
+.#{$component-name}{
+    
+    background-color: rgb(245, 245, 223);
+    padding: 30px;
+    border-radius: 10px;
+    &:not(:last-child){
+        margin-bottom: 20px;
+    }
 
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
     
-    
-
-    &__order {
-        padding-right: 33px;
-        
-        display: flex;
+    @include breakpoint(desk){
+        height: 160px;
         flex-flow: row nowrap;
         justify-content: space-between;
-
-        &__wellcome{
-            font-size: 30px;
-        }
-        &__classificar{
-            label {
-                h2 {
-                    margin-bottom: 5px;
-                }
-                select {
-                    margin-bottom: 10px;
-                }
-            }
-        }
-        
+        align-items: flex-start;
     }
 
-    &-v{
+    &__logo{
         display: flex;
-        flex-flow:row nowrap;
-        justify-content: space-between;
-
-        padding: 30px 33px ;
-        border-radius: 10px;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;    
         
-        background-color: white;
-        
-        &:not(:last-child) {
-            margin-bottom: 30px;
-        }
-        display: flex;
-        
-
-        &__info {
-            display: flex;
+        &__img{
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin-bottom: 15px;
             
-
-            &__logo{
-                margin-right: 30px;
-                border: none;
-                img {
-                border-radius: 50%;
-                }
+            @include breakpoint (desk){
+                align-self: center;
+                margin-bottom: inherit;
             }
-            &__card{
-                display: flex;
-                flex-flow: column nowrap;
-
-                &__title{
-                    margin-bottom: 15px ;
-                    &__text {
-                        margin-bottom: 15px;
-                    }
-
-                    &__tags {
-                        display: flex;
-                        flex-flow: row wrap;
-
-                        span {
-                            
-                            a {
-                                text-decoration: none;
-                                color: blue;
-                                margin-right: 2px;
-
-                                &:hover {
-                                    color: rgb(151, 98, 0);
-                                }
-                                
-                                &:not(:last-child){
-                                    &::after {
-                                        content: ",";
-                                    }
-                                }
-                            }
-                        
-                        }
-                    }
-                        
-                    
-                }
-                &__ind{
-                    text-align: center;
-                    
-                    display: flex;
-                    flex-flow: row nowrap;
-
-                    margin-top: 20px;
-
-                    &__item {
-                    
-                        &:not(:last-child){
-                            margin-right: 10px;
-                        }
-                    }
-                }
-            }
-
         }
-        &__cta {
+    }
+
+    &__content{
+        height: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpoint (desk){
+            align-items: flex-start;
+        }
+
+        &__identity{
             display: flex;
             flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
 
-            &__menu {
-                margin-bottom: 15px;
-                button {
-                    width: 135px;
-                    height: 30px;
-                    background-color: #009147;
-                    color: white;
-                    border: none;
-                    border-radius: 5px;
+            @include breakpoint(desk){
+                align-items: flex-start;
+            }
+
+            &__title{
+                text-align: center;
+                
+                h1 {
+                    font-family: 'Roboto', sans-serif;
+                    font-weight: 400;
+                    color: #ff3b00;
+                }
+                
+                
+                @include breakpoint (desk){
+                    text-align: left;
                 }
             }
-            &__cupon{
-                width: 135px;
-                height: 30px;
-                  
+
+            &__tags{
+                margin-top: 15px;
+                margin-bottom: 15px;
+                
+
+               &__list {
+                    display: flex;  
+                    flex-flow: row wrap;
+
+                    &__item {
+                        
+                        &:not(:last-child){
+                            margin-right: 5px;
+                        }
+
+                        a{
+                            border-radius: 6px;
+                            padding: 5px 10px;
+                            background-color: red;
+                            color: white;
+                            background-color: gray;
+
+                            &:hover {
+                                background-color: orange;
+                            } 
+                        }
+                    }
+                }                   
             }
+        }
+
+        &__icons{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            margin-bottom: 20px;
+            
+            @include breakpoint(desk){
+                flex-flow: row nowrap;
+            }
+
+            &__icon{
+                display: flex;
+                flex-flow: column nowrap;
+                text-align: center;
         
+                &:not(:last-child){
+                    margin-bottom: 15px;
+                    margin-right: 0;
+
+                    @include breakpoint (desk){
+                        margin-bottom: 0;
+                        margin-right: 30px;
+                    }
+                }
+                &__item{
+                    @include breakpoint(desk){
+                        font-size: 20px;
+                    }
+
+                        &.cupom{
+                        color: rgb(243, 33, 33);
+                    }
+                }
+                
+                &__txt{
+
+                    &.cupom {
+                        color: rgb(243, 33, 33);
+                    }
+                }
+
+                
+            }
+        }    
+    }
+
+    &__cta{
+
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas: 
+        "menu"
+        "wish"
+        ;
+
+        @include breakpoint (desk){
+            display: flex;
+            flex-flow: column;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+
+        &__btn-wish {
+            grid-area:wish;
+
+            margin-top: 10px;    
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            color: rgb(252, 17, 17);
+
+            &:active {
+                transform: scale(.95);  
+            }
+
+            @include breakpoint (desk){
+                height: 26px;
+                margin-top: 0;
+                margin-bottom: 12px;
+                
+            }
+        }
+
+        &__btn-menu{
+
+            grid-area:menu;
+            
+            button {
+                background-color: #d9534f ;
+                color: white;
+                width: 100px;
+                height: 35px;
+                border: none;
+                border-radius: 6px;
+                &:hover{
+                    background-color: darken($color: #d9534f, $amount: 20);
+                }
+                &:active {
+                    background-color: darken($color: #d9534f, $amount: 20);
+                    transform: scale(.95);
+                }
+              
+            }
+        }
+    }
+
+    position: relative;
+    &.is-closed{
+        pointer-events: none;
+
+        &::before{
+            content: "Fechado";
+            background-color: rgba(0, 0, 0, 0.877);
+            
+            color: white;
+            width: 100%;
+            height: 100%;
+            font-size: 50px;
+            border-radius: 10px;
+            
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
         }
     }
 }
-
-    
+   
+   
