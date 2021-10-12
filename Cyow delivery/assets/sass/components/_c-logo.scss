@@ -1,0 +1,23 @@
+/* #configuraçoes */
+@import "../config.scss";
+
+$component-name:c-logo;
+
+.#{$component-name}{    
+    height: 100%;
+    color: white;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+
+    &__title {
+        margin-right: 10px;
+
+        @media only screen and (max-width:1079px){
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,76 @@
+/* #configuraçoes */
+@import "../config.scss";
+
+$component-name:c-nav;
+
+.#{$component-name}{    
+
+    &__menu{
+
+        &__list{
+            display: flex;
+            flex-flow: row nowrap;
+
+            &__item {
+
+                &:not(:last-child){
+                    margin-right: 15px;
+                }
+
+                a {                    
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 10px;
+                    color: white;
+                    font-size: 25px;
+
+                    &:hover {
+                        color: yellow;
+                    }
+
+                    position: relative;
+                }
+
+                a::after {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+
+                    content: "";
+                    background-color: yellow;
+                    width: 100%;
+                    height: 3px;
+
+                    transition: all 0.9s ease-in-out 0s; 
+                    visibility: hidden;
+                    transform: scale(0);
+                }
+
+                a:hover:after {
+                   
+                   @include breakpoint(desk){
+                        visibility: visible;
+                        transform: scale(1);
+                   }
+                }
+            }
+
+            .item-1 {
+                a {
+                    padding-right: 10px;
+                }
+                @media only screen and (max-width:1079px){
+                    display: none;
+                }
+            }
+            .item-2 {
+                a {
+                    padding-right: 10px;
+                }
+                @media only screen and (max-width:1079px){
+                    display: none;
+                }
+            }
+        }
+    }
+}
