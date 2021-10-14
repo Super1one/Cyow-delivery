@@ -2,6 +2,9 @@
 /* #configuraçoes */
 @import "../config.scss";
 
+/* #componentes */
+@import "../components/c-about";
+
 $layout-name: l-footer;
 
 .#{$layout-name} {
@@ -14,7 +17,7 @@ $layout-name: l-footer;
         display: grid;
         grid-template-columns: $desk;
         justify-content: center;
-        grid-template-rows: 70px 1fr;
+        grid-template-rows: 1fr 70px;
         grid-template-areas: 
         "info"
         "copy"

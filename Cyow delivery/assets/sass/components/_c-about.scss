@@ -1,0 +1,160 @@
+
+/* #configuraçoes */
+@import "../config.scss";
+
+$component-name:c-about;
+
+.#{$component-name}{
+    background-color: #009147;
+    color: rgba($color: white, $alpha: .5);
+    height: 100%;
+    margin: 20px 0;
+    font-family: 'Roboto', sans-serif;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+
+    @include breakpoint(desk){
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        margin: inherit;
+    }
+
+    &__logo{
+        margin: 10px 0 20px 0;
+
+        @include breakpoint(desk){
+            margin: inherit;
+        }
+        
+        &-a{
+            color: inherit;
+
+            display: flex;
+            flex-flow: row nowrap;  
+
+            &__txt {
+                @media only screen and (max-width:1079px){
+                    display: none;
+                }
+            }
+            &__img {
+                font-size: 60px;
+            }
+        }
+    }
+
+    &__info {
+          margin: 10px 0 20px 0;
+
+          @include breakpoint(desk){
+              margin: inherit;
+    
+            }
+
+        
+        &__list {
+
+            &__item {
+                margin-top: 5px;
+                text-align: center;
+
+                @include breakpoint(desk){
+                    text-align: inherit;
+                }
+
+                a {
+                    color: inherit;
+                    font-size: 18px;
+                    font-style: italic;
+                    font-weight: 400;
+                }
+                a:hover {
+                    transition: all 0.5s ease-in-out 0s; 
+                    color: yellow;
+                }
+            }
+        }
+    }
+
+    &__social {
+        width: 240px;
+        margin: 10px 0 20px 0;
+        
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        
+        @include breakpoint (desk){
+            margin: inherit;
+        }
+
+        &__txt{
+            text-align: center;
+            font-size: 25px;
+        }
+
+        &__icons{
+            font-size: 50px;
+            margin-top: 15px;
+            
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+
+            &__icon{}
+            &__icon:hover {
+                transition: all 0.5s ease-in-out 0s; 
+                color:yellow;
+            }
+        }
+    }
+    
+    &__app {
+        width: 120px;
+        margin: 10px 0 0 0;
+        
+        
+        display: flex;
+        flex-flow: column nowrap;
+
+        @include breakpoint(desk){
+            margin: inherit;
+        }
+        
+
+
+        &__txt {
+            text-align: left;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        &__icons {
+            font-size: 50px;
+            margin-top: 15px;   
+            
+            
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+
+            &__icon{}
+            &__icon:hover{
+                transition: all 0.5s ease-in-out 0s; 
+                color:yellow;
+            }
+            
+        }
+    }
+}
