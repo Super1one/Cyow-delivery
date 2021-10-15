@@ -10,64 +10,54 @@ $layout-name: l-footer;
 .#{$layout-name} {
     grid-area: footer;
 
-    
-    @include breakpoint(desk){
-        height: 270px;
-        display: grid;
-        grid-template-columns: 1fr;
-        justify-content: center;
-        grid-template-rows: 1fr 30px;
-        grid-template-areas: 
-        "info"
-        "copy"
-        ;
-
-        @include breakpoint (desk){
-            grid-template-rows: 1fr 70px;
-        }
-    }
     &__info{
-        grid-area: info;
-        background-color: #009147;
-    }
-
-    &__copy{
-        grid-area: copy;
-        background-color: #006934;;
-        color: rgba($color: white, $alpha: .5);
-        font-size: 20px;
+        background-color: lighten($color: purple, $amount: 7);
+        &-v{
+           @include breakpoint (desk){
+            width: $desk;
+            margin: 0 auto;
+            padding: 20px 0;
+           }
         
-
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items : center;
-
-        @include breakpoint(desk){
-            height: none;
         }
+    }
+    &__copy{
+        background-color: darken($color: purple, $amount: 7);
 
-        &__txt {
+        &-v{
 
-            &__1{
-                font-size: 18px;
-                font-family: 'Roboto' sans-serif;
+            color: rgba($color: white, $alpha: .5);
+            font-size: 20px;
+            padding: 10px 0; 
+
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+
+            @include breakpoint (desk){
+                width: $desk;
+                margin: 0 auto;
             }
-            &__2{
-                font-size: 20px;
 
+            &__txt {
+                &__1{}
+
+                &__2{
+                    @media only screen and (max-width:1079px){
+                        display: none;
+                    }
+                    
+                }
+            }
+            &__CNPJ {
                 @media only screen and (max-width:1079px){
                     display: none;
                 }
             }
-        }
 
-        &__CNPJ {
-            @media only screen and (max-width:1079px){
-                display: none;
-            }
-        }
 
-        
+        }
     }
+    
 }
