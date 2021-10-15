@@ -3,12 +3,12 @@
 @import "../config.scss";
 
 $component-name:c-about;
-
+ 
 .#{$component-name}{
-    background-color: #009147;
+    background-color: inherit;
     color: rgba($color: white, $alpha: .5);
     height: 100%;
-    margin: 20px 0;
+    margin: 0 0;
     font-family: 'Roboto', sans-serif;
     
     display: flex;
@@ -22,8 +22,6 @@ $component-name:c-about;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
-
-        margin: inherit;
     }
 
     &__logo{

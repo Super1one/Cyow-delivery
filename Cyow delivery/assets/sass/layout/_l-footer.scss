@@ -10,26 +10,64 @@ $layout-name: l-footer;
 .#{$layout-name} {
     grid-area: footer;
 
-    background-color: lighten($color: gray, $amount: 10);
     
     @include breakpoint(desk){
         height: 270px;
         display: grid;
-        grid-template-columns: $desk;
+        grid-template-columns: 1fr;
         justify-content: center;
-        grid-template-rows: 1fr 70px;
+        grid-template-rows: 1fr 30px;
         grid-template-areas: 
         "info"
         "copy"
         ;
+
+        @include breakpoint (desk){
+            grid-template-rows: 1fr 70px;
+        }
     }
     &__info{
         grid-area: info;
-        background-color: rgb(192, 243, 116);
+        background-color: #009147;
     }
 
     &__copy{
         grid-area: copy;
-        background-color: rgb(97, 207, 97);
+        background-color: #006934;;
+        color: rgba($color: white, $alpha: .5);
+        font-size: 20px;
+        
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items : center;
+
+        @include breakpoint(desk){
+            height: none;
+        }
+
+        &__txt {
+
+            &__1{
+                font-size: 18px;
+                font-family: 'Roboto' sans-serif;
+            }
+            &__2{
+                font-size: 20px;
+
+                @media only screen and (max-width:1079px){
+                    display: none;
+                }
+            }
+        }
+
+        &__CNPJ {
+            @media only screen and (max-width:1079px){
+                display: none;
+            }
+        }
+
+        
     }
 }

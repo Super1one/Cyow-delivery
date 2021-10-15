@@ -11,12 +11,12 @@ $layout-name: l-header;
 .#{$layout-name} {
     grid-area: header;
 
-    background-color: gray;
+    background-color: rgb(243, 70, 70);
     height: 70px;
 
     &-v{
         height: 100%;
-        background-color: rgb(243, 70, 70);
+        background-color: inherit;
 
         display: flex;
         flex-flow: row nowrap;
